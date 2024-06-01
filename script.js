@@ -26,7 +26,7 @@ const collectEmployees = function() {
     
     employeesArray.push(currentEmployee);
 
-    console.table(employeesArray);
+    // console.table(employeesArray);
 
     addMore = window.confirm(`Add more employees?`);
   }
