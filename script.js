@@ -5,6 +5,8 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
   let addMore = true;
+
+  // resetting the array to empty, this needs to happen outside of the while loop otherwise only 1 object is held in the array
   const employeesArray = []; 
   
   while(addMore) {
@@ -12,8 +14,10 @@ const collectEmployees = function() {
     let lastName = prompt(`Enter last name`);
     let salary = prompt(`Enter salary`);
 
+     // converting anything that can be a number to a number 
     salary = parseFloat(salary);
     
+    // if something input for salary is not a number, set the salary to zero
     if (isNaN(salary)) {
       salary = 0;
     } 
@@ -24,6 +28,7 @@ const collectEmployees = function() {
       salary: salary,
     };
     
+    //pushing the newly input current employee data into the employeesArray
     employeesArray.push(currentEmployee);
 
     // console.table(employeesArray);
