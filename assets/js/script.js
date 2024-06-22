@@ -1,14 +1,13 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
+// resetting the array to empty, this needs to happen outside of the while loop otherwise only 1 object is held in the array
+const employeesArray = []; 
 
 // Collect employee data
 const collectEmployees = function() {
   // TODO: Get user input to create and return an array of employee objects
   // initializing a variable called addMore to a boolean of true
   let addMore = true;
-
-  // resetting the array to empty, this needs to happen outside of the while loop otherwise only 1 object is held in the array
-  const employeesArray = []; 
   
   // while addMore is true prompt the user for a first name, last name and salary
   while(addMore) {
